@@ -11,6 +11,7 @@
 .bodymaintext{
     font-size: 50px;
     text-align: center;
+    padding: 25px;
 }
 
 .bodytext{
@@ -42,8 +43,8 @@ button{
   }
 
 .homebar{
-    background: rgb(171,196,255);
-    background: linear-gradient(90deg, rgba(171,196,255,1) 5%, rgba(171,196,255,1) 14%, rgba(192,211,254,1) 30%, rgba(193,211,254,1) 60%, rgba(195,201,214,1) 90%);
+    background: rgb(101,106,119);
+    background: linear-gradient(90deg, rgba(101,106,119,1) 0%, rgba(121,128,144,1) 31%, rgba(163,170,184,1) 59%);
     display: flex;
     margin:0;
     padding:0;
