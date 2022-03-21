@@ -6,6 +6,7 @@
     </head>
     
     <body>
+        <div class="overlay">
         <center>
         <div class="title"><br><br>MediManage
             <img src="med.jpg">
@@ -27,5 +28,7 @@
         
         <button class="button">Sign-up</button>
         </center>
+        </div>
     </body>
+    
 </html>
