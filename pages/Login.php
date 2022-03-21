@@ -2,14 +2,14 @@
 <html>
     <head>
         <title>Login</title>
-        <link rel="stylesheet" href="Login.css">
+        <link rel="stylesheet" href="login-style.css">
     </head>
     
     <body>
         <div class="overlay">
         <center>
         <div class="title"><br><br>MediManage
-            <img src="med.jpg">
+            <img src="../assets/med.jpg">
         </div>
         <div class="forms">
             <form>

@@ -1,0 +1,26 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    height: 4em;
+    background: linear-gradient(90deg, rgba(101,106,119,1) 0%, rgba(121,128,144,1) 31%, rgba(163,170,184,1) 59%);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-flow: wrap;
+}
+
+.flex-break {
+    flex-basis: 100%;
+    width: 100%;
+}
+
+.text {
+    margin: 0;
+    padding: 0;
+}
+
+.icon {
+    margin: 0 10px;
+}
