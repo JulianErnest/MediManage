@@ -13,7 +13,7 @@
 
 <body>
     <?php include '../common/header.php'; ?>
-    <img src="../assets/home-bg3.png" class="image-bg">
+    <img src="../src/assets/home-bg3.png" class="image-bg">
     <div class="container">
         <div class="container-left">
             <div class="link-row-container">
@@ -44,7 +44,7 @@
             <h5 class="next-appointment">My next appointment</h5>
             <div class="appointment-body">
                 <div class="image-container">
-                    <img src="../assets/Zak.jpg" class="patient">
+                    <img src="../src/assets/Zak.jpg" class="patient">
                 </div>
                 <div>
                     <h5 class="appointment-details">11: 00 AM</h5>

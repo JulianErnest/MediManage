@@ -9,7 +9,7 @@
         <div class="overlay">
         <center>
         <div class="title"><br><br>MediManage
-            <img src="../assets/med.jpg">
+            <img src="../src/assets/med.jpg">
         </div>
         <div class="forms">
             <form>
