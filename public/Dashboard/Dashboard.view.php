@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="dashboard-style.css">
-    <link rel="stylesheet" href="../common/header-style.css">
-    <link rel="stylesheet" href="../common/footer-style.css">
+    <link rel="stylesheet" href="dashboard.style.css">
+    <link rel="stylesheet" href="../../src/common/header-style.css">
+    <link rel="stylesheet" href="../../src/common/footer-style.css">
     <title>Document</title>
 </head>
 
 <body>
-    <?php include '../common/header.php'; ?>
-    <img src="../src/assets/home-bg3.png" class="image-bg">
+    <?php include '../../src/common/header.php'; ?>
+    <img src="../../src/assets/home-bg3.png" class="image-bg">
     <div class="container">
         <div class="container-left">
             <div class="link-row-container">
@@ -44,7 +44,7 @@
             <h5 class="next-appointment">My next appointment</h5>
             <div class="appointment-body">
                 <div class="image-container">
-                    <img src="../src/assets/Zak.jpg" class="patient">
+                    <img src="../../src/assets/Zak.jpg" class="patient">
                 </div>
                 <div>
                     <h5 class="appointment-details">11: 00 AM</h5>
@@ -54,7 +54,7 @@
             </div>
         </div>
     </div>
-    <?php include '../common/footer.php'; ?>
+    <?php include '../../src/common/footer.php'; ?>
 </body>
 
 </html>
