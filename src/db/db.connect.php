@@ -2,12 +2,12 @@
 
 class DbConnect {
 
-    protected function connect() {
+    public function connect() {
         try
         {
             $username = "root";
             $password = "";
-            $dsn = 'mysql:dbname=ooplogin;host=localhost';
+            $dsn = 'mysql:dbname=medimanage;host=localhost';
             $dbh = new PDO($dsn, $username, $password);
             return $dbh;
         }

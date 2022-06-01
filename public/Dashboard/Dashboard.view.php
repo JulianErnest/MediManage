@@ -1,3 +1,10 @@
+<?php
+include_once '../Header/header.php';
+if (!isset($_SESSION["email"])) {
+    header("location: ../Login/Login.view.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,56 +12,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="dashboard.style.css">
-    <link rel="stylesheet" href="../../src/common/header-style.css">
-    <link rel="stylesheet" href="../../src/common/footer-style.css">
+    <link rel="stylesheet" href="Dashboard.style.css">
+    <link rel="stylesheet" href="../../src/common/header.style.css">
     <title>Document</title>
 </head>
 
 <body>
-    <?php include '../../src/common/header.php'; ?>
-    <img src="../../src/assets/home-bg3.png" class="image-bg">
-    <div class="container">
-        <div class="container-left">
-            <div class="link-row-container">
-                <h3 class="label">Patients</h3>
-                <div class="flex-break"></div>
-                <div class="link-container">
-                    <h3>Add Patient</h3>
-                    <ion-icon size=20 name="add-outline"></ion-icon>
-                </div>
-                <div class="link-container">
-                    <h3>View All Patients</h3>
-                    <ion-icon name="eye-outline"></ion-icon>
-                </div>
-                <div class="flex-break"></div>
-                <h3 class="label">Appointments</h3>
-                <div class="flex-break"></div>
-                <div class="link-container">
-                    <h3>Add Appointment</h3>
-                    <ion-icon name="add-outline"></ion-icon>
-                </div>
-                <div class="link-container">
-                    <h3>View All Appointments</h3>
-                    <ion-icon name="eye-outline"></ion-icon>
-                </div>
+    <div class="main">
+        <div class="newContainer">
+            <div class="circle" onclick='window.location="../Add-Patient/AddPatient.view.php"'>
+                <ion-icon name="person-add-outline"></ion-icon>
             </div>
+            <p class="label">Add Patient</p>
         </div>
-        <div class="appointment-container">
-            <h5 class="next-appointment">My next appointment</h5>
-            <div class="appointment-body">
-                <div class="image-container">
-                    <img src="../../src/assets/Zak.jpg" class="patient">
-                </div>
-                <div>
-                    <h5 class="appointment-details">11: 00 AM</h5>
-                    <h5 class="appointment-details">Zecharia Barriga</h5>
-                    <h5 class="appointment-details">View Patient Details</h5>
-                </div>
+        <div class="newContainer">
+            <div class="circle" onclick='window.location="../All-Patients/AllPatients.view.php"'>
+                <ion-icon name="people-outline"></ion-icon>
             </div>
+            <p class="label">View Patients</p>
+        </div>
+        <div class="newContainer">
+            <div class="circle">
+                <ion-icon name="pencil-outline"></ion-icon>
+            </div>
+            <p class="label">Add Appointment</p>
+        </div>
+        <div class="newContainer">
+            <div class="circle">
+                <ion-icon name="document-outline"></ion-icon>
+            </div>
+            <p class="label">View Appointments</p>
         </div>
     </div>
-    <?php include '../../src/common/footer.php'; ?>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
