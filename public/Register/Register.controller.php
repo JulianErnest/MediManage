@@ -12,19 +12,19 @@ class RegisterController extends RegisterModel
     public function registerUser()
     {
         if (!$this->completeInput()) {
-            header("location: http://localhost/medimanage/public/register/Register.view.php?error=incompleteInput");
+            header("location: ../../public/register/Register.view.php?error=incompleteInput");
             exit();
         }
         if (!$this->emailValid()) {
-            header("location: http://localhost/medimanage/public/register/Register.view.php?error=emailInvalid");
+            header("location: ../../public/register/Register.view.php?error=emailInvalid");
             exit();
         }
         if (!$this->passwordMatch()) {
-            header("location: http://localhost/medimanage/public/register/Register.view.php?error=passwordNotMatch");
+            header("location: ../../public/register/Register.view.php?error=passwordNotMatch");
             exit();
         }
         if (!$this->usernameNotTaken()) {
-            header("location: http://localhost/medimanage/public/register/Register.view.php?error=emailTaken");
+            header("location: ../../public/register/Register.view.php?error=emailTaken");
             exit();
         }
         $this->signupUser($this->firstName, $this->lastName, $this->email, $this->password);

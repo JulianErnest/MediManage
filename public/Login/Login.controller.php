@@ -9,11 +9,11 @@ class LoginController extends LoginModel
     public function loginUser()
     {
         if (!$this->completeInput()) {
-            header("location: http://localhost/medimanage/public/login/login.view.php?error=incompleteInput");
+            header("location: ../../public/Login/Login.view.php?error=incompleteInput");
             exit();
         }
         if (!$this->emailValid()) {
-            header("location: http://localhost/medimanage/public/login/login.view.php?error=emailInvalid");
+            header("location: ../../public/Login/Login.view.php?error=emailInvalid");
             exit();
         }
         return $this->checkUser($this->email, $this->password);

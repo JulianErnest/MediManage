@@ -1,8 +1,8 @@
 <?php
-    include_once '../Header/header.php';
-    if (isset($_SESSION["email"])) {
-        header("location: ../Dashboard/Dashboard.view.php");
-    }
+include_once '../Header/header.php';
+if (isset($_SESSION["email"])) {
+    header("location: ../Dashboard/Dashboard.view.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,7 +21,7 @@
     <div class="container-fluid fill-height">
         <div class="row center-block min-vh-100 ">
             <div class="col-5 d-flex flex-column align-items-center justify-content-center">
-                <form class="needs-validation" action="../../src/php/Register.action.php" method="POST">
+                <form novalidate class="needs-validation" action="../../src/php/Register.action.php" method="POST">
                     <p class="text-left fs-3 fw-bold">Sign-up</p>
                     <p class="text-left fs-5 fw-light"></p>Create an account now to start using MediManage
                     <div class="row my-3">
@@ -48,6 +48,21 @@
                             <input type="text" class="form-control" name="confirmPassword" placeholder="Last name">
                         </div>
                     </div>
+                    <?php if ($_SERVER['QUERY_STRING'] == 'error=invalidCredentials' || $_SERVER['QUERY_STRING'] == 'error=userNotFound') : ?>
+                        <p class="text-danger">Invalid Credentials</p>
+                    <?php endif; ?>
+                    <?php if ($_SERVER['QUERY_STRING'] == 'error=incompleteInput') : ?>
+                        <p class="text-danger">Fill out all the forms</p>
+                    <?php endif; ?>
+                    <?php if ($_SERVER['QUERY_STRING'] == 'error=emailInvalid') : ?>
+                        <p class="text-danger">Enter a valid email</p>
+                    <?php endif; ?>
+                    <?php if ($_SERVER['QUERY_STRING'] == 'error=passwordNotMatch') : ?>
+                        <p class="text-danger">Password and Confirm Password do not match</p>
+                    <?php endif; ?>
+                    <?php if ($_SERVER['QUERY_STRING'] == 'error=emailTaken') : ?>
+                        <p class="text-danger">Email already exists</p>
+                    <?php endif; ?>
                     <p class="text-lef">Already have an account?<a class="link-primary" href="http://localhost/medimanage/public/login/login.view.php">
                             Log in now
                         </a></p>
@@ -58,7 +73,7 @@
                 <h1 class="text-white">MediManage</h1>
                 <p class="lead text-white">Streamlined logistics of appointments and patient records</p>
                 <p class="lead">
-                    <a href="#" class="btn btn-lg btn-primary fw-bold border-white">Home</a>
+                    <a href="../About-Us/About-Us.view.php" class="btn btn-lg btn-primary fw-bold border-white">About Us</a>
                 </p>
             </div>
         </div>

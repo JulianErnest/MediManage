@@ -8,13 +8,13 @@ class LoginModel extends DbConnect
 
         // Check if sql statement was god
         if (!$stmt->execute(array($iEmail))) {
-            header("location: http://localhost/medimanage/public/login/login.view.php?error=statementFailed");
+            header("location: ../../public/login/login.view.php?error=statementFailed");
             exit();
         }
 
         // Check if a user with given email exists
         if ($stmt->rowCount() == 0) {
-            header("location: http://localhost/medimanage/public/login/login.view.php?error=userNotFound");
+            header("location: ../../public/login/login.view.php?error=userNotFound");
             exit();
         }
 
@@ -23,7 +23,7 @@ class LoginModel extends DbConnect
         $checkPwd = password_verify($iPassword, $user[0]["password"]);
 
         if ($checkPwd == false) {
-            header("location: http://localhost/medimanage/public/login/login.view.php?error=invalidCredentials");
+            header("location: ../../public/login/login.view.php?error=invalidCredentials");
             exit();
         }
 

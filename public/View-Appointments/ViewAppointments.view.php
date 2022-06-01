@@ -12,19 +12,21 @@ if (!isset($_SESSION["email"])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" integrity="sha256-3sPp8BkKUE7QyPSl6VfBByBroQbKxKG7tsusY2mhbVY=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="ViewAppointments.style.css">
     <title>Document</title>
-    <link rel="stylesheet" href="AllPatients.style.css">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 </head>
 
 <body>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
     <div class="event-schedule-area-two bg-color pad100">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title text-center">
                         <div class="title-text">
-                            <h2>My Patients</h2>
+                            <h2>My Appointments</h2>
                         </div>
                     </div>
                 </div>
@@ -39,9 +41,9 @@ if (!isset($_SESSION["email"])) {
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            <th scope="col">Image</th>
-                                            <th scope="col">Patient</th>
-                                            <th scope="col">Patient Notes</th>
+                                            <th scope="col">Picture</th>
+                                            <th scope="col">Session</th>
+                                            <th scope="col">Mode</th>
                                             <th class="text-center" scope="col">View More</th>
                                         </tr>
                                     </thead>
@@ -56,18 +58,24 @@ if (!isset($_SESSION["email"])) {
                                                 <div class="event-wrap">
                                                     <h3><a href="#">Jayce Ecleo</a></h3>
                                                     <div class="meta">
-                                                        <div class="categories">
-                                                            <a href="#">Last Appointment</a>
+                                                        <div class="organizers">
+                                                            <a href="#">Date</a>
                                                         </div>
                                                         <div class="time">
-                                                            <span>Jan 18, 2022: 8:30 AM - 9:00 AM</span>
+                                                            <span>June 1, 2022</span>
+                                                        </div>
+                                                        <div class="organizers">
+                                                            <a href="#">Time</a>
+                                                        </div>
+                                                        <div class="time">
+                                                            <span>8:00 - 8:05 AM</span>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="r-no">
-                                                    <span>Room B3</span>
+                                                    <span>Walk-In</span>
                                                 </div>
                                             </td>
                                             <td>
@@ -84,20 +92,26 @@ if (!isset($_SESSION["email"])) {
                                             </td>
                                             <td>
                                                 <div class="event-wrap">
-                                                    <h3><a href="#">Zecharia Barriga</a></h3>
+                                                    <h3><a href="#">Zecharria Barriga</a></h3>
                                                     <div class="meta">
-                                                        <div class="categories">
-                                                            <a href="#">Last Appointment</a>
+                                                        <div class="organizers">
+                                                            <a href="#">Date</a>
                                                         </div>
                                                         <div class="time">
-                                                            <span>March 2, 2022 - 4:00 PM - 4:30 PM</span>
+                                                            <span>June 5, 2022</span>
+                                                        </div>
+                                                        <div class="organizers">
+                                                            <a href="#">Time</a>
+                                                        </div>
+                                                        <div class="time">
+                                                            <span>1:00 - 1:15 PM</span>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="r-no">
-                                                    <span>Room D3</span>
+                                                    <span>Walk-In</span>
                                                 </div>
                                             </td>
                                             <td>
@@ -116,18 +130,24 @@ if (!isset($_SESSION["email"])) {
                                                 <div class="event-wrap">
                                                     <h3><a href="#">Julian Ernest Camello</a></h3>
                                                     <div class="meta">
-                                                        <div class="categories">
-                                                            <a href="#">Last Appointment</a>
+                                                        <div class="organizers">
+                                                            <a href="#">Date</a>
                                                         </div>
                                                         <div class="time">
-                                                            <span>May 2, 2022 - 1:00 PM - 1:30 PM</span>
+                                                            <span>June 8, 2022</span>
+                                                        </div>
+                                                        <div class="organizers">
+                                                            <a href="#">Time</a>
+                                                        </div>
+                                                        <div class="time">
+                                                            <span>10:30 - 11:00 AM</span>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </td>
                                             <td>
                                                 <div class="r-no">
-                                                    <span>asdasds</span>
+                                                    <span>Online</span>
                                                 </div>
                                             </td>
                                             <td>
@@ -140,6 +160,7 @@ if (!isset($_SESSION["email"])) {
                                 </table>
                             </div>
                         </div>
+
 </body>
 
 </html>

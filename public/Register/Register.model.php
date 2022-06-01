@@ -7,7 +7,6 @@ class RegisterModel extends DbConnect
         $stmt = $this->connect()->prepare('SELECT email FROM users where email = ?;');
         if (!$stmt->execute(array($email))) {
             $stmt = null;
-            header("http://localhost/medimanage/public/register/register.view.php?error=emailTaken");
             exit();
         }
         $resultCheck = false;
@@ -26,7 +25,7 @@ class RegisterModel extends DbConnect
         $hashedPwd = password_hash($password, PASSWORD_DEFAULT);
 
         if ($stmt->execute(array($first_name, $last_name, $email, $hashedPwd))) {
-            header("Location: http://localhost/medimanage/public/login/login.view.php");
+            header("Location: ../../public/login/login.view.php");
         }  else {
             header("Location: http://localhost/medimanage/public/register/register.view.php?error=statementFailed");
         }

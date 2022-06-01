@@ -22,9 +22,11 @@ include '../../src/php/Start.action.php';
                 <img src="../../src/assets/medimanage.png" class="logo" alt="">
 
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li><a href="#" class="nav-link px-2 link-secondary">
-                            <p class="home">Home</p>
-                        </a></li>
+                    <?php if (!isset($_SESSION['email'])) : ?>
+                        <li><a href="../About-Us/About-Us.view.php" class="nav-link px-2 link-secondary">
+                                <p class="home">About Us</p>
+                            </a></li>
+                    <?php endif; ?>
                 </ul>
 
                 <?php if (!isset($_SESSION['email'])) : ?>
@@ -47,7 +49,6 @@ include '../../src/php/Start.action.php';
                             <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
                         </a>
                         <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
-                            <li><a class="dropdown-item" href="#">Profile</a></li>
                             <li><a class="dropdown-item" href="../../src/php/Logout.action.php">Sign out</a></li>
                         </ul>
                     </div>
@@ -57,6 +58,7 @@ include '../../src/php/Start.action.php';
             </div>
         </div>
     </header>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <script src="../../src/js/header.js"></script>
 </body>
 

@@ -32,19 +32,18 @@ if (!isset($_SESSION["email"])) {
             <p class="label">View Patients</p>
         </div>
         <div class="newContainer">
-            <div class="circle">
+            <div class="circle" onclick='window.location="../Add-Appointment/AddAppointment.view.php"'>
                 <ion-icon name="pencil-outline"></ion-icon>
             </div>
             <p class="label">Add Appointment</p>
         </div>
         <div class="newContainer">
-            <div class="circle">
+            <div class="circle" onclick='window.location="../View-Appointments/ViewAppointments.view.php"'>
                 <ion-icon name="document-outline"></ion-icon>
             </div>
             <p class="label">View Appointments</p>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
